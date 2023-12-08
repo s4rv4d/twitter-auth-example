@@ -49,6 +49,7 @@ app.get("/auth/twitter/callback", async function (req, res) {
 });
 
 app.get("/user", async function (req, res) {
+  // no auth key required
     const { data } = await client.users.findMyUser({
         "user.fields": ["profile_image_url", "description", "name"],
     });
