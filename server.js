@@ -5,7 +5,7 @@ require('dotenv').config({path: __dirname + '/.env'});
 
 const app = express();
 const port = 3000;
-const state = "randomStateVar"; // needed to generate aut url
+const state = "randomStateVar"; // needed for generating auth url
 
 
 // auth client
@@ -26,7 +26,6 @@ app.get("/auth/twitter", async function (req, res) {
         state,
         code_challenge_method: "s256",
     });
-    console.log(authUrl);
     res.redirect(authUrl);
 });
 
