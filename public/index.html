@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter AUTH</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+    
+        button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            border-radius: 7px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button onclick="redirectToTwitterAuth()">Login with Twitter</button>
+
+    <script>
+        function redirectToTwitterAuth() {
+            window.location.href = 'http://localhost:3000/auth/twitter';
+        }
+    </script>
+</body>
+
+</html>
