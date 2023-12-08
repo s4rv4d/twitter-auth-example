@@ -37,7 +37,7 @@ app.get("/auth/twitter/callback", async function (req, res) {
             // Both code and state are not null
 
             // can add extra validation here
-            await authClient.requestAccessToken(code);
+            const accessToken = await authClient.requestAccessToken(code); // can store if needed
             res.redirect("/user");
 
         } else {
